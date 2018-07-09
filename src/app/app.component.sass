@@ -1,0 +1,43 @@
+@import '../assets/sass-tools/main.sass'
+.wrap
+    width: 100%
+    .wrapper
+        width: 90%
+        margin: 0 auto
+        opacity: 0
+        @include animation(show .4s 2.5s forwards)
+        text-align: center
+        h1
+            font-family: $lob
+            font-size: 3.5em
+            font-weight: 100
+            text-shadow: 2px 2px 5px $mainColor
+            color: $w
+            margin-bottom: 0
+        h2
+            font-family: $lob
+            font-size: 2em
+            font-weight: 500
+            color: $w
+            text-shadow: 2px 2px 5px $mainColor
+.mask
+    top: 0
+    left: 0
+    position: fixed
+    width: 100%
+    height: 100%
+    z-index: 2
+    background: #e52d27
+    background-image: url('../assets/images/trees.png')
+    background-color: $mainColor
+    background-position: center
+    background-repeat: no-repeat
+    @include animation(mask .4s 2s forwards)
+    &:before
+        content: ''
+        width: 0
+        height: 2px
+        bottom: 0
+        position: absolute
+        background-color: $w
+        @include animation(line 1.5s .2s forwards)

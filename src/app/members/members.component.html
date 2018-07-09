@@ -1,0 +1,31 @@
+<a class="update" (click)="update(partic1)">Refresh the list</a>
+<section class="container">
+    <ul id="memberList" class="memberslist">
+        <li *ngFor="let member of partic1" class="member">
+            <div class="content">
+                <p>{{member.name.first}} {{member.name.last}}</p>
+                <span>{{member.email}}<br>{{member.phone}}</span>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <p>{{partic1[0].name.first}} {{partic1[0].name.last}}</p>
+                <span>{{partic1[0].email}}<br>{{partic1[0].phone}}</span>
+            </div>
+        </li>
+    </ul>
+    <ul id="memberList2" class="memberList2">
+        <li *ngFor="let member of partic1" class="member">
+            <div class="content">
+                <p>{{member.name.first}} {{member.name.last}}</p>
+                <span>{{member.email}}<br>{{member.phone}}</span>
+            </div>
+        </li>
+        <li>
+            <div class="content">
+                <p>{{partic1[0].name.first}} {{partic1[0].name.last}}</p>
+                <span>{{partic1[0].email}}<br>{{partic1[0].phone}}</span>
+            </div>
+        </li>
+    </ul>
+</section>

@@ -1,0 +1,41 @@
+@mixin transition($props) 
+    -webkit-transition: $props
+    -moz-transition: $props
+    -o-transition: $props
+    transition: $props
+    -ms-transition: $props
+@mixin transform($props) 
+    -webkit-transform: $props
+    -moz-transform: $props
+    -o-transform: $props
+    transform: $props
+    -ms-transform: $props
+@mixin animation($props) 
+    -webkit-animation: $props
+    -moz-animation: $props
+    -o-animation: $props
+    animation: $props
+    -ms-animation: $props
+::-webkit-scrollbar 
+    width:  12px
+    height: 12px
+::-webkit-scrollbar-thumb 
+    background: #ccc
+::-webkit-scrollbar-track 
+    background: $w
+// ::-webkit-input-placeholder 
+//     font-weight: 500
+//     font-size: 13.5px
+//     color: $b
+// ::-moz-placeholder 
+//     font-weight: 500
+//     font-size: 13.5px
+//     color: $b
+// :-ms-input-placeholder 
+//     font-weight: 500
+//     font-size: 13.5px
+//     color: $b
+// :-moz-placeholder 
+//     font-weight: 500
+//     font-size: 13.5px
+//     color: $b
