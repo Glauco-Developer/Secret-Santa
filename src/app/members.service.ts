@@ -12,11 +12,22 @@ export class MembersService {
   public getMembers() {
     return this.http.get(this.url)
   }
-  public updateMembers(m){
-    for (let i = m.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      [m[i], m[j]] = [m[j], m[i]]; 
+
+  public couple(members) {
+    let coupleList = [];
+    let recipients = members.slice();
+    for (let i = 0; i < members.length; i++) {
+      let givers = members[i];
+      let recIndex = Math.floor(Math.random() * recipients.length);
+      while (recipients[recIndex] === givers) {
+        recIndex = Math.floor(Math.random() * recipients.length);
+      }
+      let recipient = recipients.splice(recIndex, 1)[0];
+      coupleList.push({
+        givers: givers,
+        receiver: recipient
+      });
     }
-    return m;
-  }
+    return coupleList;
+  };
 }

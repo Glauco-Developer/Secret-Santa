@@ -42,7 +42,7 @@
                     animation-delay: $i * .25s
         li
             display: inline-flex
-            width: 50%
+            width: 100%
             opacity: 0
             text-align: center
             justify-content: center
@@ -71,29 +71,30 @@
                     font-weight: 600
                     @media screen and (max-width: 600px)
                         margin-bottom: 0
-            &:nth-child(even)
-                margin-left: -2px
-                &:before
-                    content: ''
-                    position: absolute
-                    background-image: url('../../assets/images/gift.png')
-                    width: 45px
-                    height: 45px
-                    left: 0px
-                    top: 50%
-                    margin-top: -22.5px
-                    opacity: 0
-                    @include animation(gift .5s 1.5s forwards)
-                    @media screen and (max-width: 600px)
-                        background-image: url('../../assets/images/gift-small.png')
-                        width: 31px
-                        height: 31px
-                        top: 40%
-                        margin-left: -7px
-                .content
+                &.receiver
                     background-color: $w
                     color: $mainColor
                     border: 1px dashed $mainColor
+                    margin-left: -2px
+                    position: relative
+                    &:before
+                        content: ''
+                        position: absolute
+                        background-image: url('../../assets/images/gift.png')
+                        width: 45px
+                        height: 45px
+                        left: 0px
+                        top: 50%
+                        margin-top: -22.5px
+                        opacity: 0
+                        @include animation(gift .5s 1.5s forwards)
+                        @media screen and (max-width: 600px)
+                            background-image: url('../../assets/images/gift-small.png')
+                            width: 31px
+                            height: 31px
+                            top: 40%
+                            margin-left: -7px
+
 
     .memberList2
         li
